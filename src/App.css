@@ -389,7 +389,7 @@ font-family: 'Roboto', sans-serif;
   }
   /*welcome-hero-content*/
 
-  /* carousel general atart */
+  /* fullscreen-image atart */
 
   .fullscreen-image {
 	position: relative!;
@@ -407,12 +407,13 @@ font-family: 'Roboto', sans-serif;
 	top: 0!;
 	left: 0!;
 	width: 100%!;
+
   }
  
   
   
 
-/* carousel general end */
+/* fullscreen-image end */
 
   
 

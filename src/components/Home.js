@@ -1,5 +1,5 @@
 import React from "react";
-import MainBanner from "./ProductCarousel.js";
+import MainBanner from "./MainBanner.js";
 
 class Home extends React.Component {
     render() {
@@ -79,9 +79,9 @@ class Home extends React.Component {
 
                 </div>
                 {/* NAVBAR END */}
-                {/* carousel start */}
+                {/* MainBanner start */}
                 <MainBanner />
-                {/* carousel end */}
+                {/* MainBanner end */}
                 <section id="new-arrivals" className="new-arrivals">
 
                     <div className="container">
