@@ -7,9 +7,6 @@ import "../src/css/animate.css";
 import "../src/css/bootsnav.css";
 import "./css/bootstrap.min.css";
 import "../src/css/linearicons.css";
-import "../src/css/owl.carousel.min.css";
-import "../src/css/owl.theme.default.min.css";
-
 
 
 
