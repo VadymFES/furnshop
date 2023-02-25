@@ -1,13 +1,11 @@
 import React from "react";
-import ProductCarousel from "./ProductCarousel.js"
+import MainBanner from "./ProductCarousel.js";
 
 class Home extends React.Component {
     render() {
         return (
             <div>
-                {/* carousel start */}
-                <ProductCarousel />
-                {/* carousel end */}
+
                 {/* NAVBAR START */}
                 <div className="top-area">
                     <div className="header-area">
@@ -81,8 +79,11 @@ class Home extends React.Component {
 
                 </div>
                 {/* NAVBAR END */}
-
+                {/* carousel start */}
+                <MainBanner />
+                {/* carousel end */}
                 <section id="new-arrivals" className="new-arrivals">
+
                     <div className="container">
                         <div className="section-header">
                             <h2>new arrivals</h2>
