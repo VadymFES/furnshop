@@ -1,87 +1,17 @@
 import React from "react";
 import MainBanner from "./MainBanner.js";
+import Header from "./Header.js";
+import Footer from "./Footer.js";
 
 class Home extends React.Component {
     render() {
         return (
             <div>
 
-                {/* NAVBAR START */}
-                <div className="top-area">
-                    <div className="header-area">
-
-                        <nav className="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy" data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
-
-                            {/* SEARCH INPUT START */}
-                            <div className="top-search">
-                                <div className="container">
-                                    <div className="input-group">
-                                        <span className="input-group-addon"><i className="fa fa-search"></i></span>
-                                        <input type="text" className="form-control" placeholder="Search"></input>
-                                        <span className="input-group-addon close-search"><i className="fa fa-times"></i></span>
-                                    </div>
-                                </div>
-                            </div>
-                            {/* SEARCH INPUT END */}
-
-
-                            <div className="container">
-
-                                <div className="attr-nav">
-                                    <ul>
-                                        <li className="search">
-                                            <a href="/#"><span className="lnr lnr-magnifier"></span></a>
-                                        </li>
-                                        <li className="profile">
-                                            <a href="/#"><span className="lnr lnr-user"></span></a>
-                                        </li>
-                                        <li className="dropdown">
-                                            <a href="/#" className="dropdown-toggle" data-toggle="dropdown" >
-                                                <span className="lnr lnr-cart"></span>
-                                                <span className="badge badge-bg-1">2</span>
-                                            </a>
-                                            <ul className="dropdown-menu cart-list s-cate">
-                                                <li className="single-cart-list">
-                                                    <div className="cart-close">
-                                                        <span className="lnr lnr-cross"></span>
-                                                    </div>
-                                                </li>
-                                                <li className="total">
-                                                    <span>Total: $0.00</span>
-                                                    <button className="btn-cart pull-right" onclick="window.location.href='/#'">view cart</button>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                                {/* NAVBAR LOGO START */}
-                                <div className="navbar-header">
-                                    <a className="logo" href="index.html">
-                                        <img src="logo-main.png" alt="Dekop" style={{ height: '60px', width: '120px' }} />
-                                    </a>
-                                </div>
-                                <div className="collapse navbar-collapse menu-ui-design" id="navbar-menu">
-                                    <ul className="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
-                                        <li className=" scroll active"><a href="/#home">Головна</a></li>
-                                        <li className="scroll"><a href="/#new-arrivals">Новинки</a></li>
-                                        <li className="scroll"><a href="/#catalog">Каталог</a></li>
-                                        <li className="scroll"><a href="/#feature">Доставка</a></li>
-                                        <li className="scroll"><a href="/#blog">Про нас</a></li>
-                                        <li className="scroll"><a href="/#newsletter">Контакти</a></li>
-                                    </ul>
-                                </div>
-                                {/* NAVBAR LOGO END */}
-                            </div>
-                        </nav>
-
-                    </div>
-                    <div className="clearfix"></div>
-
-                </div>
-                {/* NAVBAR END */}
-                {/* MainBanner start */}
+                <Header />
                 <MainBanner />
-                {/* MainBanner end */}
+
+                
                 <section id="new-arrivals" className="new-arrivals">
 
                     <div className="container">
@@ -416,108 +346,9 @@ class Home extends React.Component {
 
 
 
+                <Footer />
 
-
-                <section id="newsletter" className="newsletter">
-                    <div className="container">
-                        <div className="hm-footer-details">
-                            <div className="row">
-                                <div className=" col-md-3 col-sm-6 col-xs-12">
-                                    <div className="hm-footer-widget">
-                                        <div className="hm-foot-title">
-                                            <h4>information</h4>
-                                        </div>
-                                        <div className="hm-foot-menu">
-                                            <ul>
-                                                <li><a href="//#">about us</a></li>
-                                                <li><a href="//#">contact us</a></li>
-                                                <li><a href="//#">news</a></li>
-                                                <li><a href="//#">store</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className=" col-md-3 col-sm-6 col-xs-12">
-                                    <div className="hm-footer-widget">
-                                        <div className="hm-foot-title">
-                                            <h4>collections</h4>
-                                        </div>
-                                        <div className="hm-foot-menu">
-                                            <ul>
-                                                <li><a href="//#">wooden chair</a></li>
-                                                <li><a href="//#">royal cloth sofa</a></li>
-                                                <li><a href="//#">accent chair</a></li>
-                                                <li><a href="//#">bed</a></li>
-                                                <li><a href="//#">hanging lamp</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className=" col-md-3 col-sm-6 col-xs-12">
-                                    <div className="hm-footer-widget">
-                                        <div className="hm-foot-title">
-                                            <h4>my accounts</h4>
-                                        </div>
-                                        <div className="hm-foot-menu">
-                                            <ul>
-                                                <li><a href="//#">my account</a></li>
-                                                <li><a href="//#">wishlist</a></li>
-                                                <li><a href="//#">Community</a></li>
-                                                <li><a href="//#">order history</a></li>
-                                                <li><a href="//#">my cart</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className=" col-md-3 col-sm-6  col-xs-12">
-                                    <div className="hm-footer-widget">
-                                        <div className="hm-foot-title">
-                                            <h4>newsletter</h4>
-                                        </div>
-                                        <div className="hm-foot-para">
-                                            <p>
-                                                Subscribe  to get latest news,update and information.
-                                            </p>
-                                        </div>
-                                        <div className="hm-foot-email">
-                                            <div className="foot-email-box">
-                                                <input type="text" className="form-control" placeholder="Enter Email Here...." />
-                                            </div>
-                                            <div className="foot-email-subscribe">
-                                                <span><i className="fa fa-location-arrow"></i></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </section>
-
-
-                <footer id="footer" className="footer">
-                    <div className="container">
-                        <div className="hm-footer-copyright text-center">
-                            <div className="footer-social">
-                                <a href="//#"><i className="fa fa-facebook"></i></a>
-                                <a href="//#"><i className="fa fa-instagram"></i></a>
-                            </div>
-                            <p>
-                                &copy;copyright. designed and developed by <a href="https://www.linkedin.com/in/vadym-fesiuk-8930491ba/">Vadym Fesiuk</a>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div id="scroll-Top">
-                        <div className="return-to-top">
-                            <i className="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
-                        </div>
-
-                    </div>
-
-                </footer>
+                
 
             </div>
 
