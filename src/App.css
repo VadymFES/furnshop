@@ -302,20 +302,8 @@ font-family: 'Roboto', sans-serif;
   /*-------------------------------------
 		3.  Welcome-hero
   --------------------------------------*/
-  .welcome-hero {
-	position: relative;
-	z-index: 1;
-	background: #f8f9fd;
-  }
+
   .header-area{position: absolute;top:0;left:0;width: 100%;z-index: 99;}
-  .single-slide-item{
-	position: relative;
-	background-size: cover;
-	background-position: center;
-  }
-  .single-slide-item.slide1{background:transparent;}
-  .single-slide-item.slide2{background:transparent;}
-  .single-slide-item.slide3{background:transparent;}
   
   /*welcome-hero-content*/
   .single-welcome-hero{
