@@ -1,7 +1,7 @@
 import React from "react";
-import MainBanner from "./MainBanner.js";
-import Header from "./Header.js";
-import Footer from "./Footer.js";
+import MainBanner from "../components/MainBanner.js";
+import Header from "../components/Header.js";
+import Footer from "../components/Footer.js";
 
 class Home extends React.Component {
     render() {

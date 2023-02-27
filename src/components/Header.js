@@ -53,7 +53,7 @@ const Header = () => {
                                 </div>
                                 {/* NAVBAR LOGO START */}
                                 <div className="navbar-header">
-                                    <a className="logo" href="index.html">
+                                    <a className="logo" href="/">
                                         <img src="logo-main.png" alt="Dekop" style={{ height: '60px', width: '120px' }} />
                                     </a>
                                 </div>
