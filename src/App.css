@@ -707,7 +707,7 @@ font-family: 'Roboto', sans-serif;
   /*-------------------------------------
 		10. News-letter
   --------------------------------------*/
-  .newsletter{padding:120px 0 75px;}
+  .newsletter{padding-top: 15px;}
   
   .hm-footer-widget{margin-bottom: 30px;}
   .hm-foot-title h4 {
