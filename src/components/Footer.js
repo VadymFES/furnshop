@@ -23,7 +23,7 @@ const Footer = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className=" col-md-3 col-sm-6 col-xs-12">
+                            {/* <div className=" col-md-3 col-sm-6 col-xs-12">
                                 <div className="hm-footer-widget">
                                     <div className="hm-foot-title">
                                         <h4>collections</h4>
@@ -38,7 +38,7 @@ const Footer = () => {
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                             <div className=" col-md-3 col-sm-6 col-xs-12">
                                 <div className="hm-footer-widget">
                                     <div className="hm-foot-title">
@@ -48,7 +48,6 @@ const Footer = () => {
                                         <ul>
                                             <li><a href="//#">my account</a></li>
                                             <li><a href="//#">wishlist</a></li>
-                                            <li><a href="//#">Community</a></li>
                                             <li><a href="//#">order history</a></li>
                                             <li><a href="//#">my cart</a></li>
                                         </ul>
