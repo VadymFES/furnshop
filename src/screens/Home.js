@@ -1,8 +1,8 @@
 import React from "react";
-import MainBanner from "../components/MainBanner.js";
-import Header from "../components/Header.js";
-import Footer from "../components/Footer.js";
-import ShopingSection from "../components/ShopingSection.js";
+import MainBanner from "../components/MainBanner.jsx";
+import Header from "../components/Header.jsx";
+import Footer from "../components/Footer.jsx";
+import ShopingSection from "../components/ShopingSection.jsx";
 
 class Home extends React.Component {
     render() {

@@ -3,18 +3,19 @@ import "./js/bootsnav";
 import Home from "./screens/Home"
 import "./App.css";
 import "./index.css";
-import "../src/css/animate.css";
 import "../src/css/bootsnav.css";
 import "./css/bootstrap.min.css";
 import "../src/css/linearicons.css";
-import SingleProduct from "./screens/SingleProduct";
-import { BrowserRouter as Router, Routes ,Route } from 'react-router-dom';
+import SingleProduct from "./screens/SingleProduct/SingleProduct";
+import NotFoundPage from "./screens/NotFoundPage/NotFoundPage";
+import { BrowserRouter as Router, Routes ,Route} from 'react-router-dom';
 
 function App () {
   return (
     <Router>
       <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="*" element={<NotFoundPage />} />
+        <Route path="/" element={<Home />} />
         <Route path="/product/:id" element={<SingleProduct />} />
       </Routes>
     </Router>
