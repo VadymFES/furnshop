@@ -55,7 +55,6 @@
 }
 
 .product-name-home {
-  margin: -20px 0 0;
 }
 
 .product-rating {
@@ -209,7 +208,7 @@ font-size: 3rem;
 
   .product-name, .product-price, .product-rating {
     font-size: 3rem;
-    margin: 0;
+    padding: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;

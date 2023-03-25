@@ -14,9 +14,9 @@ const ShopingSection = () => {
           <h2>Каталог</h2>
         </div>
         <div className="catalog-content">
-          <div className="row">
+          <div className="product-grid-container">
             {products.map((product) => (
-              <div className="col-md-3 col-sm-4" key={product.id}>
+              <div className="row-item" key={product.id}>
                 <div className="single-item">
                   <div className="single-item-bg">
                     <Link to={`/product/${product.id}`}>
@@ -24,8 +24,7 @@ const ShopingSection = () => {
                     </Link>
                     <div className="single-item-bg-overlay"></div>
                     {product.isOnSale && (
-                      <div className="sale bg-2">
-                        <p>sale</p>
+                      <div className="sale">
                       </div>
                     )}
 
@@ -35,7 +34,7 @@ const ShopingSection = () => {
  
                   </div>
 
-                  <div className="product-rating">
+                  <div className="productRating">
                     <StarRating rating={product.rating} />
                     <span className="num-reviews">({product.numReviews} reviews)</span>
                   </div>

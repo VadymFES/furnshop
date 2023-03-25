@@ -342,29 +342,39 @@
   .catalog {padding:85px 0 70px;}
 .catalog-content{margin-top: 80px;}
 
-.row {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	align-items: center!important;
+.product-grid-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 20px;
+	justify-items: center;
+	
   }
 
-.single-item {
-	margin-bottom: 50px;
-	text-align: center;
-}
-.single-item-bg {
-	position: relative;
-	min-height: 310px;
-	background: #f8f9fc;
+  .row-item {
+	padding: 10px;
+	box-sizing: border-box;
+	min-height: 100px;
+	position: relative; /* add this */
+  }
+  
+  .productRating,
+  .product-name-home,
+  .item-product-price {
+	position: sticky;
+	margin: 0;
 	display: flex;
-	align-items: center;
-	justify-content:center;
+	justify-content: center;
+  }
+  
+  .productRating {
+	padding-top: 1rem;
+  }
+
+
+.single-item-bg {
 	overflow:hidden;
 }
 .single-item-bg img{
-	width:auto;
-	height:auto;
 	-webkit-transition: .3s linear;
 	-moz-transition: .3s linear;
 	-ms-transition: .3s linear;
@@ -379,13 +389,6 @@
 	transform:scale(1.3);
 }
 .single-item-bg-overlay{
-	position: absolute;
-	content: "";
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background: rgba(106,119,129,.1);
 	-webkit-transform:scale(0);
 	-moz-transform:scale(0);
 	-ms-transform:scale(0);
@@ -403,8 +406,8 @@
 	-ms-transform:scale(1);
 	-o-transform:scale(1);
 	transform:scale(1);
-}
-.sale {
+} */
+/* .sale {
 	position: absolute;
 	top: 10px;
 	right: 0;
@@ -417,7 +420,7 @@
 
 .sale.bg-1{background: #d8924c;}
 .sale.bg-2{background: #47d93c;}
-
+ */
 
 
 .single-item-bg:hover {
@@ -691,6 +694,11 @@
 
 
   @media only screen and (max-width: 768px) {
+
+		.row-item {
+		  flex-basis: 100%;
+		}
+
 	.catalog-img {
 		max-width: 100%;
 	}
@@ -700,19 +708,13 @@
 		text-align: center;
 	}
 	.single-item-bg {
-		position: relative;
-		min-height: 90%;
-		max-width: 90%;
-		background: #f8f9fc;
-		display: flex;
-		align-items: center;
-		justify-content:center;
 		overflow:hidden;
-		margin: 0 auto;
+
 	}
 	.single-item-bg img{
-		width: 75%;
+		width: 65%;
 
   }
+
 
 }
