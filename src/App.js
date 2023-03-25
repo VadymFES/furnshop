@@ -8,6 +8,7 @@ import "./css/bootstrap.min.css";
 import "../src/css/linearicons.css";
 import SingleProduct from "./screens/SingleProduct/SingleProduct";
 import NotFoundPage from "./screens/NotFoundPage/NotFoundPage";
+import AboutUs from "./screens/AboutUs/AboutUs";
 import { BrowserRouter as Router, Routes ,Route} from 'react-router-dom';
 
 function App () {
@@ -16,6 +17,7 @@ function App () {
       <Routes>
       <Route path="*" element={<NotFoundPage />} />
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutUs />} />
         <Route path="/product/:id" element={<SingleProduct />} />
       </Routes>
     </Router>
