@@ -10,7 +10,7 @@ function NotFoundPage() {
     <div className={styles.notFoundPage}>
       <h1>404</h1>
       <p>Упс! Щось пішло не так.</p>
-      <button className={styles.button} onClick={redirectToHome}>Краще повернутися на головну</button>
+      <button className={styles.button} onClick={redirectToHome}>Краще повернутися на головну сторінку.</button>
     </div>
   );
 }

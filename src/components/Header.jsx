@@ -64,7 +64,7 @@ const Header = () => {
                                         <li className=" scroll active"><a href="/#home">Головна</a></li>
                                         <li className="scroll"><a href="/#catalog">Каталог</a></li>
                                         <li className="scroll"><a href="/#delivery">Доставка</a></li>
-                                        <li className="scroll"><a href="/#aboutus">Про нас</a></li>
+                                        <li className="scroll"><a href="/#about">Про нас</a></li>
                                         <li className="scroll"><a href="/#contact">Контакти</a></li>
                                     </ul>
                                 </div>
