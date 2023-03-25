@@ -7,7 +7,6 @@ import StarRating from '../../components/StarRating';
 import './SingleProduct.css';
 
 
-
 function SingleProduct() {
   const { id } = useParams();
   const product = products.find((product) => product.id === id);
