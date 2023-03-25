@@ -15,10 +15,10 @@ const Footer = () => {
                                     </div>
                                     <div className="hm-foot-menu">
                                         <ul>
-                                            <li><a href="//#">about us</a></li>
+                                            <li><a href="/about">about us</a></li>
                                             <li><a href="//#">contact us</a></li>
                                             <li><a href="//#">news</a></li>
-                                            <li><a href="//#">store</a></li>
+                                            <li><a href="/">store</a></li>
                                         </ul>
                                     </div>
                                 </div>

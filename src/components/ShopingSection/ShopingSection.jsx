@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import products from "../data/products";
-import Pagination from "./Pagination";
-import StarRating from './StarRating';
+import products from "../../data/products";
+import Pagination from "../Pagination";
+import StarRating from '../StarRating';
+import './ShopingSection.css';
 
 
 const ShopingSection = () => {
@@ -28,21 +29,23 @@ const ShopingSection = () => {
                       </div>
                     )}
 
+                    <Link to={`/product/${product.id}`}></Link>
 
-                        <Link to={`/product/${product.id}`}></Link>
-  
- 
+
                   </div>
 
                   <div className="productRating">
                     <StarRating rating={product.rating} />
-                    <span className="num-reviews">({product.numReviews} reviews)</span>
+                    <span className="num-reviews">({product.numReviews} відгуків)</span>
                   </div>
 
                   <h4 className="product-name-home"><Link to={`/product/${product.id}`}>{product.name}</Link></h4>
-                  <p className="item-product-price">${product.price}</p>
-
-
+                  <div className="item-product-price-and-add-to-cart">
+                    <p className="item-product-price" style={{ textTransform: 'none'}}>{product.price} грн</p>
+                    <div className="">
+                      <button className="add-to-cart">Купити</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
