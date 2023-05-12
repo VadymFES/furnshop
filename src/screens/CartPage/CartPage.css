@@ -1,0 +1,35 @@
+.cart-page {
+  padding: 20px;
+}
+
+.cart-page h1 {
+  font-size: 24px;
+}
+
+.cart-page p {
+  margin-bottom: 10px;
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.product-info img {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+
+.product-info h3 {
+  font-size: 18px;
+}
+
+.product-info p {
+  margin: 5px 0;
+}
+
+.actions button {
+  margin-right: 10px;
+}
