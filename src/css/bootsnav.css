@@ -475,7 +475,6 @@ nav.navbar.bootsnav.no-background{
     position: absolute;
     width: 100%;
     left: 0;
-    top: 0;
 }
 
 .wrap-sticky nav.navbar.bootsnav.sticked{
@@ -1374,6 +1373,7 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
     
     .attr-nav{
         right: 30px;
+        margin-top: 10px !important;
     }
     
     .attr-nav > ul{

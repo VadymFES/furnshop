@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux'; // Import the useDispatch hook
 import products from '../../data/products';
-import Header from '../../components/Header';
+import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer';
 import StarRating from '../../components/StarRating';
 import './SingleProduct.css';
-
+import { addToCart } from '../../store/actions/CartActions'; // Import the addToCart action
 
 function SingleProduct() {
   const { id } = useParams();
@@ -13,7 +14,9 @@ function SingleProduct() {
   const [comments, setComments] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [cartItems, setCartItems] = useState(0);
-
+  
+  const dispatch = useDispatch(); // Create a dispatch function
+  
   useEffect(() => {
     const savedComments = JSON.parse(localStorage.getItem(`comments_${id}`));
     if (savedComments) {
@@ -46,13 +49,11 @@ function SingleProduct() {
     e.target.reset();
   };
 
-
-
-
-
   const handleAddToCart = () => {
+    dispatch(addToCart(product)); // Dispatch the addToCart action with the product
     setCartItems(cartItems + 1);
   };
+
 
 
 
@@ -62,9 +63,15 @@ function SingleProduct() {
     <div key={product.id}>
       <Header />
       <div className="product-page">
-        <div className="breadcrumbs">
-          <Link to="/">Головна</Link> / <Link to="/shop">Каталог</Link> / <span className="product-name-breadcrumbs">{product.name}</span>
-        </div>
+        <nav style={{ '--bs-breadcrumb-divider': 'url(\'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'8\' height=\'8\'%3E%3Cpath d=\'M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z\' fill=\'currentColor\'/%3E%3C/svg%3E\')' }} aria-label="breadcrumb">
+          <div className="breadcrumb-item">
+            <ol className="breadcrumb">
+              <li className="breadcrumb-item"><Link to="/">Головна</Link> </li>
+              <li className="breadcrumb-item"><Link to="/shop">Каталог</Link> </li>
+              <li className="breadcrumb-item"><span className="product-name-breadcrumbs">{product.name}</span></li>
+            </ol>
+          </div>
+        </nav>
         <div className="product-container">
           <div className="product-image">
             <div className="carousel">
@@ -103,7 +110,7 @@ function SingleProduct() {
               <p>{product.description}</p>
             </div>
 
-            <div className="product-comments">
+            <section className="product-comments">
               <p className="comments-h2">Відгуки</p>
 
               <form onSubmit={handleSubmit}>
@@ -128,7 +135,7 @@ function SingleProduct() {
                 </div>
               ))}
 
-            </div>
+            </section>
 
 
           </div>

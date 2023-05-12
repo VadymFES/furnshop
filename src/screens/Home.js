@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import MainBanner from "../components/MainBanner.jsx";
-import Header from "../components/Header.jsx";
+import Header from "../components/Header/Header.jsx";
 import Footer from "../components/Footer.jsx";
 import ShopingSection from "../components/ShopingSection/ShopingSection.jsx";
 
@@ -19,11 +19,9 @@ function Home() {
         <div>
             <Header cartItems={cartItems} favoriteItems={favoriteItems} />
             <MainBanner />
-
-
             <ShopingSection addToCart={addToCart} addToFavorite={addToFavorite} />
 
-
+{/* 
             <section id="feature" className="feature">
                 <div className="container">
                     <div className="section-header">
@@ -103,9 +101,9 @@ function Home() {
                     </div>
                 </div>
 
-            </section>
+            </section> */}
 
-
+{/* 
 
             <section id="blog" className="blog">
                 <div className="container">
@@ -164,7 +162,7 @@ function Home() {
                     </div>
                 </div>
 
-            </section>
+            </section> */}
 
 
 

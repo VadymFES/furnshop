@@ -11,14 +11,14 @@ const Footer = () => {
                             <div className=" col-md-3 col-sm-6 col-xs-12">
                                 <div className="hm-footer-widget">
                                     <div className="hm-foot-title">
-                                        <h4>information</h4>
+                                        <h4>Довідка</h4>
                                     </div>
                                     <div className="hm-foot-menu">
                                         <ul>
-                                            <li><a href="/about">about us</a></li>
-                                            <li><a href="//#">contact us</a></li>
-                                            <li><a href="//#">news</a></li>
-                                            <li><a href="/">store</a></li>
+                                            <li><a href="/about">Про нас</a></li>
+                                            <li><a href="//#">Контакти</a></li>
+                                            <li><a href="//#">Новини</a></li>
+                                            <li><a href="/">Каталог</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -42,14 +42,14 @@ const Footer = () => {
                             <div className=" col-md-3 col-sm-6 col-xs-12">
                                 <div className="hm-footer-widget">
                                     <div className="hm-foot-title">
-                                        <h4>my accounts</h4>
+                                        <h4>Аккаунт</h4>
                                     </div>
                                     <div className="hm-foot-menu">
                                         <ul>
-                                            <li><a href="//#">my account</a></li>
-                                            <li><a href="//#">wishlist</a></li>
-                                            <li><a href="//#">order history</a></li>
-                                            <li><a href="//#">my cart</a></li>
+                                            <li><a href="//#">Мій профіль</a></li>
+                                            <li><a href="//#">Список бажань</a></li>
+                                            <li><a href="//#">Історія покупок</a></li>
+                                            <li><a href="/cart">Корзина</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -61,12 +61,12 @@ const Footer = () => {
                                     </div>
                                     <div className="hm-foot-para">
                                         <p>
-                                            Subscribe  to get latest news,update and information.
+                                            Підпишись щоб отримувати свіжі новини.
                                         </p>
                                     </div>
                                     <div className="hm-foot-email">
                                         <div className="foot-email-box">
-                                            <input type="text" className="form-control" placeholder="Enter Email Here...." />
+                                            <input type="text" className="form-control" placeholder="Введіть Email тут...." />
                                         </div>
                                         <div className="foot-email-subscribe">
                                             <span><i className="fa fa-location-arrow"></i></span>

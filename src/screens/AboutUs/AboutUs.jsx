@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../../components/Header";
+import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer";
 import aboutusimg from "./Furniture-company-profiles-2.webp"
 import about from "./about.jpg"
