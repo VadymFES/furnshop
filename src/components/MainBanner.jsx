@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import main from '../assets/images/main.jpg';
+import main from '../assets/images/main.png';
 
 
 const MainBanner = () => {

@@ -1,4 +1,20 @@
+/*=========== TABLE OF CONTENTS ===========
+1.  General css (Reset code)
+2.  Top-area
+3.  Welcome-hero
+4.  Populer-post
+5.  New-arrivals  
+6.  Sofa-coolection
+7.  Features
+8.  Blog
+9.  Clients
+10. News-letter
+11. Footer
+==========================================*/
 
+/*-------------------------------------
+		1.General css (Reset code)
+--------------------------------------*/
 * {
   padding: 0;
   margin: 0;
@@ -98,6 +114,7 @@ body {
   opacity: 0;
 }
 
+/* section-header */
 .section-header {
   position: relative;
   text-align: center;
@@ -112,7 +129,9 @@ body {
   text-transform: lowercase;
 }
 
+/* section-header */
 
+/*=============Style css=========*/
 
 
 
@@ -126,6 +145,7 @@ body {
 
 
 
+/* fullscreen-image atart */
 
 .fullscreen-image {
   position: relative !;
@@ -148,6 +168,18 @@ body {
 }
 
 
+
+/* fullscreen-image end */
+
+
+
+/*-------------------------------------
+		4. Populer-post
+  --------------------------------------*/
+
+/*-------------------------------------
+		7. Features
+  --------------------------------------*/
 .feature {
   padding: 110px 0 0px;
 }
@@ -162,6 +194,7 @@ body {
   margin-bottom: 30px;
 }
 
+/*.single-feature-txt */
 .single-feature-txt,
 .single-blog-txt {
   margin-top: 25px;
@@ -195,10 +228,16 @@ span.feature-review {
   font-weight: 400;
 }
 
+/*.single-feature-txt */
+
+/*-------------------------------------       
+		8.  Blog
+  --------------------------------------*/
 .blog {
   padding: 80px 0;
 }
 
+/*.single-blog*/
 .single-blog {
   -webkit-transition: 0.3s linear;
   -moz-transition: 0.3s linear;
@@ -289,6 +328,12 @@ span.feature-review {
   color: #e99c2e;
 }
 
+/*.single-blog*/
+
+
+/*-------------------------------------
+		10. News-letter
+  --------------------------------------*/
 .newsletter {
   padding-top: 15px;
 }
@@ -330,6 +375,7 @@ span.feature-review {
   margin-bottom: 25px;
 }
 
+/*hm-foot-email*/
 .hm-foot-email {
   position: relative;
 }
@@ -366,6 +412,12 @@ span.feature-review {
   box-shadow: 0 5px 15px rgba(0, 0, 0, .4);
 }
 
+/*hm-foot-email*/
+
+
+/*-------------------------------------
+		11. Footer
+  --------------------------------------*/
 .footer {
   background: #f8f9fd;
   display: flex;
@@ -394,6 +446,9 @@ span.feature-review {
   color: #e99c2e;
 }
 
+/*===============================
+	Scroll Top
+  ===============================*/
 #scroll-Top .return-to-top {
   position: fixed;
   right: 30px;

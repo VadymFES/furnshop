@@ -69,8 +69,7 @@
 	-ms-transform:scale(1);
 	-o-transform:scale(1);
 	transform:scale(1);
-} */
-
+} 
 
 .single-item-bg:hover {
 	opacity:1;
@@ -90,7 +89,9 @@
 	font-size: 16px;
 	font-weight: 600;
   }
+  /* .single-item:hover h4 a{color:#e99c2e;} */
 
+/* add to cart button start */
 
 .item-product-price-and-add-to-cart {
     display: flex;
@@ -147,6 +148,7 @@ background-image: url(../../assets/icons/2.png);
   
   
   
+/* add to cart button end */
   
   @media only screen and (max-width: 768px) {
 

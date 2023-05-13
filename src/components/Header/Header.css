@@ -7,6 +7,7 @@
 	z-index: 9999;
 }
 
+  /*.navbar-brand*/
   .navbar-header a.navbar-brand,.navbar-header a.navbar-brand:hover,.navbar-header a.navbar-brand:focus {
 	display: inline-block;
 	color: #616060;
@@ -22,7 +23,9 @@
   
   .navbar-header a.navbar-brand span{display: inline-block !important;color:#e99c2e !important;text-transform:capitalize !important;} 
   
+  /*.navbar-brand*/
   
+  /*.nav li*/
   nav.navbar.bootsnav ul.nav > li > a {
 	color: #616060;
 	font-size: 16px;
@@ -40,8 +43,10 @@
   
 
   .wrap-sticky nav.navbar.bootsnav.sticked ul.nav > li > a{padding:30px 25px;}
+  /*.nav li*/
 
   
+  /*.attr-nav*/
   .attr-nav {
 	position: relative;
 	margin-top: 5px;
@@ -54,7 +59,9 @@
 	font-weight: 500;
   }
   .attr-nav > ul > li > a:hover{color: #e99c2e;}
+  /*.attr-nav*/
   
+  /*badge*/
   .badge {
 	background-color: #de2a1b!important;
 	border: 2px solid #de2a1b!important;
@@ -65,7 +72,9 @@
 	height: 20px;
 	padding-top: 3px;
   }
+  /*.badge*/
   
+  /*.navbar-toggle */
   nav.navbar.bootsnav .navbar-toggle {
 	position: relative;
 	background-color: transparent;
@@ -74,6 +83,7 @@
 	top: 0;
   }
   nav.navbar.bootsnav .navbar-toggle i{color: #e99c2e;}
+  /*.navbar-toggle */
 
   .menuNav {
     padding: 10px;;
