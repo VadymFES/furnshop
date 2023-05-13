@@ -4,7 +4,6 @@ import products from "../../data/products";
 import Pagination from "../Pagination";
 import StarRating from '../StarRating';
 import './ShopingSection.css';
-// import favoriteIcon from '../../assets/icons/1.png';
 
 function ShopingSection(props) {
   const [favorites, setFavorites] = useState([]);

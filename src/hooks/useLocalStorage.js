@@ -10,14 +10,10 @@ const useLocalStorage = (key, defaultValue) => {
     setState((prevState) => {
       let updatedState;
       if (Array.isArray(newState)) {
-        // Remove items from prevState that exist in newState
         updatedState = prevState.filter((item) => !newState.some((newItem) => newItem.id === item.id));
-        // Concatenate the filtered prevState with newState
         updatedState = [...updatedState, ...newState];
       } else {
-        // Remove the item from prevState with the same id as newState
         updatedState = prevState.filter((item) => item.id !== newState.id);
-        // Add the new item to updatedState
         updatedState = [...updatedState, newState];
       }
       localStorage.setItem(key, JSON.stringify(updatedState));

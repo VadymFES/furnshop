@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux'; // Import the useDispatch hook
+import { useDispatch } from 'react-redux';
 import products from '../../data/products';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer';
 import StarRating from '../../components/StarRating';
 import './SingleProduct.css';
-import { addToCart } from '../../store/actions/CartActions'; // Import the addToCart action
+import { addToCart } from '../../store/actions/CartActions'; 
 
 function SingleProduct() {
   const { id } = useParams();
@@ -15,7 +15,7 @@ function SingleProduct() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [cartItems, setCartItems] = useState(0);
   
-  const dispatch = useDispatch(); // Create a dispatch function
+  const dispatch = useDispatch();
   
   useEffect(() => {
     const savedComments = JSON.parse(localStorage.getItem(`comments_${id}`));
@@ -50,7 +50,7 @@ function SingleProduct() {
   };
 
   const handleAddToCart = () => {
-    dispatch(addToCart(product)); // Dispatch the addToCart action with the product
+    dispatch(addToCart(product)); 
     setCartItems(cartItems + 1);
   };
 

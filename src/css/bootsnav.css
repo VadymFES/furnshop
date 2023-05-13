@@ -1,5 +1,4 @@
-/* MEGAMENU STYLE
-=================================*/
+
 nav.bootsnav .dropdown.megamenu-fw {
     position: static;
 }
@@ -26,8 +25,6 @@ nav.bootsnav .dropdown.megamenu-fw .dropdown-menu {
     right: 0;
 }
 
-/* Navbar
-=================================*/
 nav.navbar.bootsnav{
     margin-bottom: 0;
     -moz-border-radius: 0px;
@@ -89,8 +86,6 @@ ul.menu-col li a:focus{
     text-decoration: none;
 }
 
-/* Navbar Full
-=================================*/
 nav.bootsnav.navbar-full{
     padding-bottom: 10px;
     padding-top: 10px;
@@ -194,9 +189,6 @@ li.close-full-menu{
     padding-top: 30px;
     padding-bottom: 30px;
 }
-
-/* Atribute Navigation
-=================================*/
 .attr-nav{
     float: right;
     display: inline-block;
@@ -306,8 +298,6 @@ ul.cart-list > li.total > span{
     padding-top: 8px;
 }
 
-/* Top Search
-=================================*/
 .top-search{
     background-color: #333;
     padding: 10px 0;
@@ -338,8 +328,6 @@ ul.cart-list > li.total > span{
     cursor: pointer;
 }
 
-/* Side Menu
-=================================*/
 body{
     -webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -410,8 +398,6 @@ body.on-side{
     text-decoration: none;
 }
 
-/* Share
-=================================*/
 nav.navbar.bootsnav .share{
     padding: 0 30px;
     margin-bottom: 30px;
@@ -444,8 +430,6 @@ nav.navbar.bootsnav .share ul > li > a{
     color: #fff;
 }
 
-/* Transparent
-=================================*/
 nav.navbar.bootsnav.navbar-fixed{
     position: fixed;
     display: block;
@@ -460,8 +444,6 @@ nav.navbar.bootsnav.no-background{
 	transition: all 1s ease-in-out;
 }
 
-/* Navbar Sticky
-=================================*/
 .wrap-sticky{
     position: relative;
     -webkit-transition: all 0.3s ease-in-out;
@@ -490,8 +472,6 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
     left: -280px;
 }
 
-/* Navbar Responsive
-=================================*/
 @media (min-width: 1024px) and (max-width:1400px) {
     body.wrap-nav-sidebar .wrapper .container{
         width: 100%;
@@ -501,8 +481,6 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
 }
 
 @media (min-width: 1024px) {
-    /* General Navbar
-    =================================*/
     nav.navbar.bootsnav ul.nav .dropdown-menu .dropdown-menu{
         margin-top: -2px;
     }
@@ -626,8 +604,6 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
         height: auto !important;
     }
     
-    /* Navbar Transparent
-    =================================*/  
     nav.navbar.bootsnav.no-background{
         background-color: transparent;
         border: none;
@@ -688,8 +664,6 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
         display: block;
     }
     
-    /* Atribute Navigation
-    =================================*/    
     .attr-nav > ul > li.dropdown ul.dropdown-menu{
         margin-top: 0;
         margin-left: 55px;
@@ -697,8 +671,6 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
         left: -250px;
     }
     
-    /* Menu Center
-    =================================*/
     nav.navbar.bootsnav.menu-center .container{
         position: relative;
     }
@@ -719,8 +691,6 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
         right: 15px;
     }
     
-    /* Navbar Brand top
-    =================================*/
     nav.bootsnav.navbar-brand-top .navbar-header{
         display: block;
         width: 100%;
@@ -751,8 +721,6 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
         margin: 0 0 -5px 0;
     }
     
-    /* Navbar Center
-    =================================*/
     nav.bootsnav.brand-center .navbar-header{
         display: block;
         width: 100%;
@@ -818,8 +786,6 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
         padding-left: 100px;
     }
     
-    /* Navbar Sidebar
-    =================================*/
     body.wrap-nav-sidebar .wrapper{
         padding-left: 260px; 
         overflow-x: hidden;
@@ -977,8 +943,7 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
 }
 
 @media (max-width: 992px) {
-    /* Navbar Responsive
-    =================================*/ 
+
     nav.navbar.bootsnav .navbar-brand    {
         display: inline-block;
         float: none !important;
@@ -1230,9 +1195,7 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
     .top-search .container{
         padding: 0 45px;
     }
-    
-    /* Navbar full Responsive
-    =================================*/   
+     
     nav.bootsnav.navbar-full ul.nav{
         margin-left: 0;
     }
@@ -1258,15 +1221,11 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
         padding-right: 15px;
     }
     
-    /* Navbar Sidebar
-    =================================*/ 
     nav.navbar.bootsnav.navbar-sidebar .share{
         padding: 30px 15px;
         margin-bottom: 0;
     }
     
-    /* Tabs
-    =================================*/ 
     nav.navbar.bootsnav .megamenu-content.tabbed{
         padding-left: 0 !important;
     }
@@ -1276,8 +1235,6 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
         margin-left: -15px !important;
     }
     
-    /* Mobile Navigation
-    =================================*/     
     body > .wrapper{
         -webkit-transition: all 0.3s ease-in-out;
         -moz-transition: all 0.3s ease-in-out;
@@ -1411,14 +1368,10 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
         padding: 5px 10px !important;
     }
     
-    /* Navbar Sidebar
-    =================================*/ 
     nav.navbar.bootsnav.navbar-sidebar .share{
         padding: 30px 15px !important;
     }
     
-    /* Navbar Sidebar
-    =================================*/ 
     nav.navbar.bootsnav.navbar-sidebar .share{
         padding: 30px 0 !important;
         margin-bottom: 0;
@@ -1429,8 +1382,6 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
         margin-bottom: 0;
     }
     
-    /* Mobile Navigation
-    =================================*/ 
     body.side-right > .wrapper{
         margin-left: 280px;
         margin-right: -280px !important;

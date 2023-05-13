@@ -23,22 +23,6 @@ const Footer = () => {
                                     </div>
                                 </div>
                             </div>
-                            {/* <div className=" col-md-3 col-sm-6 col-xs-12">
-                                <div className="hm-footer-widget">
-                                    <div className="hm-foot-title">
-                                        <h4>collections</h4>
-                                    </div>
-                                    <div className="hm-foot-menu">
-                                        <ul>
-                                            <li><a href="//#">wooden chair</a></li>
-                                            <li><a href="//#">royal cloth sofa</a></li>
-                                            <li><a href="//#">accent chair</a></li>
-                                            <li><a href="//#">bed</a></li>
-                                            <li><a href="//#">hanging lamp</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div> */}
                             <div className=" col-md-3 col-sm-6 col-xs-12">
                                 <div className="hm-footer-widget">
                                     <div className="hm-foot-title">
