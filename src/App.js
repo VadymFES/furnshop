@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from "./screens/Home";
 import "./App.css";
 import "./index.css";
-import "../src/css/bootsnav.css";
 import "./css/bootstrap.min.css";
 import "../src/css/linearicons.css";
 import SingleProduct from "./screens/SingleProduct/SingleProduct";
