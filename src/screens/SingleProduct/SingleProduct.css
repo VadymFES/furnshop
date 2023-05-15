@@ -1,11 +1,10 @@
 .product-page {
-  padding-top: 80px;
+  padding-top: 0.5rem;
 }
 
 .product-details {
   flex-basis: 40%;
   margin-top: 7rem;
-
 }
 
 .product-container {
@@ -15,24 +14,35 @@
   padding-bottom: 100px;
 }
 
-.breadcrumbs {
+.breadcrumb {
   display: flex;
   align-items: center;
   font-size: 1.5rem;
-  margin-top: 4.3rem;
-  margin-left: 4.3rem;
+  padding: 3rem 0 0 2rem;
+  margin-left: 5rem;
 }
 
-.breadcrumbs a {
+.breadcrumb a {
   text-decoration: none;
   color: #333;
   font-size: 1.5rem;
-  margin: 0 1rem;
+  font-weight: bold;
+
 }
 
-.breadcrumbs a:hover {
+.breadcrumb a:hover {
   text-decoration: underline;
 }
+
+.breadcrumb-icon {
+  margin: 0 0.5rem 0.4rem 0.5rem;
+  width: 20px; 
+  height: 20px;
+}
+
+.breadcrumb-item li {
+  list-style-type: none;
+  }
 
 .product-name-breadcrumbs {
   font-size: 1.7rem; 
@@ -43,7 +53,7 @@
 }
 
 .product-image img {
-  max-width: 100%;
+  max-width: 90%;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -149,7 +159,7 @@ font-size: 3rem;
 }
 
 .thumbnail.active {
-  border: 2px solid #000;
+  border: 2px solid #a86767;
 }
 
 .carousel-thumbnails img {
@@ -163,13 +173,14 @@ font-size: 3rem;
 .carousel-nav {
   position: absolute;
   top: 50%;
+  left: 5%;
   transform: translateY(-50%);
   opacity: 0.3;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   z-index: 1;
 }
 
@@ -192,9 +203,9 @@ font-size: 3rem;
     flex-direction: column;
   }
   
-.breadcrumbs {
-  margin-top: 2rem;
-  margin-left: 2rem;
+.breadcrumb {
+  margin-top: 0.7rem;
+  margin-left: 1rem;
   font-size: 1.2rem;
 }
 
@@ -209,14 +220,14 @@ font-size: 3rem;
 
   .product-name, .product-price, .product-rating {
     font-size: 3rem;
-    padding: 2rem;
+    padding: 0.7rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   .product-image {
-    margin: 5rem 3rem 0;
+    margin: 2rem 3rem 0;
   }
   
   .product-image img {
@@ -226,7 +237,8 @@ font-size: 3rem;
   
   .product-details {
     flex-basis: auto;
-    margin-top: 2rem;
+    margin: 2rem;
+    text-align: center;
   }
 
   .product-price{

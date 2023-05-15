@@ -6,6 +6,8 @@ import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer';
 import StarRating from '../../components/StarRating';
 import './SingleProduct.css';
+import breadcrumbIcon from '../../assets/icons/breadcrumb.png';
+import homeBreadcrumb from '../../assets/icons/home-breadcrumb.png';
 import { addToCart } from '../../store/actions/CartActions'; 
 
 function SingleProduct() {
@@ -63,12 +65,17 @@ function SingleProduct() {
     <div key={product.id}>
       <Header />
       <div className="product-page">
-        <nav style={{ '--bs-breadcrumb-divider': 'url(\'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'8\' height=\'8\'%3E%3Cpath d=\'M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z\' fill=\'currentColor\'/%3E%3C/svg%3E\')' }} aria-label="breadcrumb">
+        <nav >
           <div className="breadcrumb-item">
             <ol className="breadcrumb">
-              <li className="breadcrumb-item"><Link to="/">Головна</Link> </li>
-              <li className="breadcrumb-item"><Link to="/shop">Каталог</Link> </li>
-              <li className="breadcrumb-item"><span className="product-name-breadcrumbs">{product.name}</span></li>
+              <li className="breadcrumb-item">
+              <img className="breadcrumb-icon" src={homeBreadcrumb} alt="Home" />
+                <Link to="/">Головна</Link> </li>
+              <li className="breadcrumb-item">
+                <img className="breadcrumb-icon" src={breadcrumbIcon} alt="breadcrumbIcon" />
+              <Link to="/shop">Каталог</Link> </li>
+              <li className="breadcrumb-item"><img className="breadcrumb-icon" src={breadcrumbIcon} alt="breadcrumbIcon" />
+              <span className="product-name-breadcrumbs">{product.name}</span></li>
             </ol>
           </div>
         </nav>
