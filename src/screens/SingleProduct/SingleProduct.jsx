@@ -15,7 +15,7 @@ function SingleProduct() {
   const product = products.find((product) => product.id === id);
   const [comments, setComments] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [cartItems, setCartItems] = useState(0);
+const [cartItems, setCartItems] = useState([]);
   
   const dispatch = useDispatch();
   
@@ -51,10 +51,11 @@ function SingleProduct() {
     e.target.reset();
   };
 
-  const handleAddToCart = () => {
-    dispatch(addToCart(product)); 
-    setCartItems(cartItems + 1);
-  };
+
+    const handleAddToCart = () => {
+      dispatch(addToCart(product));
+      setCartItems([...cartItems, product]);
+    };
 
 
 
@@ -63,7 +64,7 @@ function SingleProduct() {
 
   return (
     <div key={product.id}>
-      <Header />
+<Header cartItems={cartItems} />
       <div className="product-page">
         <nav >
           <div className="breadcrumb-item">

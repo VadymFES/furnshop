@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom';
 import logo from '../../logo.png';
 import styles from './Header.module.css';
 
-const Header = (props) => {
-    const { cartItems, favoriteItems } = props;
+const Header = ({ cartItems }) => {
+    const [favoriteItems] = useState([]);
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+console.log(cartItems)
 
     function toggleMenu() {
         setIsMenuOpen(!isMenuOpen);
@@ -49,10 +50,11 @@ const Header = (props) => {
                                 </Link>
                             </li>
                             <li className={styles["icon-item"]}>
-                                <Link to="/cart">
-                                    <i className={`lnr lnr-cart ${styles["lnr-cart"]}`}></i>
-                                    {cartItems && cartItems.length > 0 && <span className={styles["badge"]}>{cartItems.length}</span>}
-                                </Link>
+                            <Link to="/cart">
+  <i className={`lnr lnr-cart ${styles["lnr-cart"]}`}></i>
+  {cartItems && cartItems.length > 0 && <span className={styles["badge"]}>{cartItems.length}</span>}
+</Link>
+
                             </li>
                         </ul>
                     </div>
