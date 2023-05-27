@@ -15,7 +15,7 @@ function SingleProduct() {
   const product = products.find((product) => product.id === id);
   const [comments, setComments] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
-const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(0);
   
   const dispatch = useDispatch();
   
@@ -24,6 +24,8 @@ const [cartItems, setCartItems] = useState([]);
     if (savedComments) {
       setComments(savedComments);
     }
+
+    window.scrollTo(0, 0); // Scroll to the top of the page
   }, [id]);
 
   const prevSlide = () => {
@@ -51,11 +53,10 @@ const [cartItems, setCartItems] = useState([]);
     e.target.reset();
   };
 
-
-    const handleAddToCart = () => {
-      dispatch(addToCart(product));
-      setCartItems([...cartItems, product]);
-    };
+  const handleAddToCart = () => {
+    dispatch(addToCart(product)); 
+    setCartItems(cartItems + 1);
+  };
 
 
 
@@ -64,7 +65,7 @@ const [cartItems, setCartItems] = useState([]);
 
   return (
     <div key={product.id}>
-<Header cartItems={cartItems} />
+      <Header />
       <div className="product-page">
         <nav >
           <div className="breadcrumb-item">
