@@ -111,7 +111,7 @@ function ShopingSection(props) {
                     </div>
 
                     <h4 className="product-name-home">
-                      <Link to={`/product/${product.id}`}>{product.name}</Link>
+                      <Link to={`/products/${product.id}`}>{product.name}</Link>
                     </h4>
                     <div className="item-product-price-and-add-to-cart">
                       <p className="item-product-price" style={{ textTransform: "none" }}>

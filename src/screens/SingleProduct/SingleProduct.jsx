@@ -12,13 +12,13 @@ import { addToCart } from '../../store/actions/CartActions';
 
 function SingleProduct() {
   const { id } = useParams();
-  const product = products.find((product) => product.id === id);
+  const product = products.find((product) => product.id );
   const [comments, setComments] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [cartItems, setCartItems] = useState(0);
   
   const dispatch = useDispatch();
-  
+
   useEffect(() => {
     const savedComments = JSON.parse(localStorage.getItem(`comments_${id}`));
     if (savedComments) {
@@ -73,9 +73,9 @@ function SingleProduct() {
               <li className="breadcrumb-item">
               <img className="breadcrumb-icon" src={homeBreadcrumb} alt="Home" />
                 <Link to="/">Головна</Link> </li>
-              <li className="breadcrumb-item">
-                <img className="breadcrumb-icon" src={breadcrumbIcon} alt="breadcrumbIcon" />
-              <Link to="/shop">Каталог</Link> </li>
+              
+            
+              
               <li className="breadcrumb-item"><img className="breadcrumb-icon" src={breadcrumbIcon} alt="breadcrumbIcon" />
               <span className="product-name-breadcrumbs">{product.name}</span></li>
             </ol>
