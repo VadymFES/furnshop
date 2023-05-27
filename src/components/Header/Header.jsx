@@ -3,35 +3,59 @@ import { Link } from 'react-router-dom';
 import logo from '../../logo.png';
 import styles from './Header.module.css';
 
-const Header = ({ cartItems }) => {
-    const [favoriteItems] = useState([]);
+const Header = ({ cartItems, favoriteItems }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isCatalogOpen, setIsCatalogOpen] = useState(false);
 
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-console.log(cartItems)
+  function toggleMenu() {
+    setIsMenuOpen(!isMenuOpen);
+  }
 
-    function toggleMenu() {
-        setIsMenuOpen(!isMenuOpen);
-    }
 
-    return (
-        <div className={styles["top-area"]}>
-            <div className={styles["header-area"]}>
-                <div className={styles["container"]}>
-                    <div className={styles["logo-container"]}>
-                        <Link className={styles["logo"]} to="/">
-                            <img src={logo} alt="Dekop" style={{ height: '60px', width: '120px' }} />
-                        </Link>
-                    </div>
-                    <div className={styles["menu-container"]}>
-                        <button type="button" className={`${styles["navbar-toggle"]} ${isMenuOpen ? styles["active"] : ''}`} onClick={toggleMenu}>
-                            <span className={styles["icon-bar"]}></span>
-                            <span className={styles["icon-bar"]}></span>
-                            <span className={styles["icon-bar"]}></span>
-                        </button>
-                        <div className={`${styles["navbar-menu"]} ${isMenuOpen ? styles["active"] : ''}`}>
-                            <ul className={styles["navigation-items"]}>
-                                <li className={styles["nav-item"]}><a href="/#">Головна</a></li>
-                                <li className={styles["nav-item"]}><a href="/#catalog">Каталог</a></li>
+  function handleCatalogMouseEnter() {
+    setIsCatalogOpen(true);
+  }
+
+  function handleCatalogMouseLeave() {
+    setIsCatalogOpen(false);
+  }
+
+  return (
+    <div className={styles["top-area"]}>
+      <div className={styles["header-area"]}>
+        <div className={styles["container"]}>
+          <div className={styles["logo-container"]}>
+            <Link className={styles["logo"]} to="/">
+              <img src={logo} alt="Dekop" style={{ height: '60px', width: '120px' }} />
+            </Link>
+          </div>
+          <div className={styles["menu-container"]}>
+            <button type="button" className={`${styles["navbar-toggle"]} ${isMenuOpen ? styles["active"] : ''}`} onClick={toggleMenu}>
+              <span className={styles["icon-bar"]}></span>
+              <span className={styles["icon-bar"]}></span>
+              <span className={styles["icon-bar"]}></span>
+            </button>
+            <div className={`${styles["navbar-menu"]} ${isMenuOpen ? styles["active"] : ''}`}>
+              <ul className={styles["navigation-items"]}>
+                <li className={styles["nav-item"]}><a href="/#">Головна</a></li>
+                <li className={`${styles["nav-item"]} ${styles["dropdown"]}`}
+                  onMouseEnter={handleCatalogMouseEnter}
+                  onMouseLeave={handleCatalogMouseLeave}
+                >
+                  <a href="/#">Каталог ⮟</a>
+                  {isCatalogOpen && (
+                    <ul className={styles["dropdown-menu"]}>
+                        <li><a href="/sofas">Дивани</a></li>
+                        <li><a href="/#">Кутики</a></li>
+                        <li><a href="/#">Столи</a></li>
+                        <li><a href="/#">Стільці</a></li>
+                        <li><a href="/#">Крісла</a></li>
+                        <li><a href="/#">Ліжка</a></li>
+                        <li><a href="/#">Комоди</a></li>
+                        <li><a href="/#">Тумби</a></li>
+                    </ul>
+                  )}
+                </li>
                                 <li className={styles["nav-item"]}><a href="/#delivery">Доставка</a></li>
                                 <li className={styles["nav-item"]}><a href="/about">Про нас</a></li>
                                 <li className={styles["nav-item"]}><a href="/#contact">Контакти</a></li>

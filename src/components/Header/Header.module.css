@@ -9,9 +9,11 @@
   padding: 10px;
   background-color: #e7e4e4;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 999;
-
 }
 
 .container {
@@ -86,6 +88,47 @@
 .nav-item a:hover {
   color: #f34c26;
   transition: all 0.4s ease;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -90px;
+  background-color: #d3d1d1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 2;
+  min-width: 50px;
+  column-count: 2;  /* Set the number of columns */
+  column-gap: 30px; /* Adjust the gap between columns */
+  border:  #f7aaaa;
+}
+
+.dropdown-menu li {
+  margin-bottom: 5px;
+  border:   #afa1a1;
+  background-color: #e7e3e3;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
 }
 
 .icons {
