@@ -10,6 +10,9 @@ function ShopingSection(props) {
   const [sortBy, setSortBy] = useState("");
   const [sortedProducts, setSortedProducts] = useState(products);
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const productsPerPage = 12; // Number of products to display per page
+
   const handleAddToCart = (product) => {
     props.addToCart(product);
   };
@@ -30,6 +33,7 @@ function ShopingSection(props) {
 
   const handleSort = (option) => {
     setSortBy(option);
+    setCurrentPage(1); // Reset current page to 1
 
     let sortedItems = [...products]; // Copy the original products array
 
@@ -43,6 +47,20 @@ function ShopingSection(props) {
 
     setSortedProducts(sortedItems);
   };
+
+  const calculateProductRange = () => {
+    const lastIndex = currentPage * productsPerPage;
+    const firstIndex = lastIndex - productsPerPage;
+    return { firstIndex, lastIndex };
+  };
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    const catalogSection = document.getElementById("catalog");
+    catalogSection.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
+  const totalPages = Math.ceil(sortedProducts.length / productsPerPage);
 
   return (
     <section id="catalog" className="catalog">
@@ -65,46 +83,65 @@ function ShopingSection(props) {
         </div>
         <div className="catalog-content">
           <div className="product-grid-container">
-            {sortedProducts.map((product) => (
-              <div className="row-item" key={product.id}>
-                <div className="single-item">
-                  <div className="single-item-bg">
-                    <Link to={`/products/${product.id}`}>
-                      <img className="catalog-img" src={product.image} alt={product.name} />
-                    </Link>
-                    <div className="single-item-bg-overlay"></div>
-                    {product.isOnSale && (
-                      <div className="sale">
-                      </div>
-                    )}
-                  </div>
+            {sortedProducts
+              .slice(
+                calculateProductRange().firstIndex,
+                calculateProductRange().lastIndex
+              )
+              .map((product) => (
+                <div className="row-item" key={product.id}>
+                  <div className="single-item">
+                    <div className="single-item-bg">
+                      <Link to={`/products/${product.id}`}>
+                        <img
+                          className="catalog-img"
+                          src={product.image}
+                          alt={product.name}
+                        />
+                      </Link>
+                      <div className="single-item-bg-overlay"></div>
+                      {product.isOnSale && <div className="sale"></div>}
+                    </div>
 
-                  <div className="productRating">
-                    <StarRating rating={product.rating} />
-                    <span className="num-reviews">({product.numReviews} відгуків)</span>
-                  </div>
+                    <div className="productRating">
+                      <StarRating rating={product.rating} />
+                      <span className="num-reviews">
+                        ({product.numReviews} відгуків)
+                      </span>
+                    </div>
 
-                  <h4 className="product-name-home"><Link to={`/product/${product.id}`}>{product.name}</Link></h4>
-                  <div className="item-product-price-and-add-to-cart">
-                    <p className="item-product-price" style={{ textTransform: 'none' }}>{product.price} грн</p>
+                    <h4 className="product-name-home">
+                      <Link to={`/product/${product.id}`}>{product.name}</Link>
+                    </h4>
+                    <div className="item-product-price-and-add-to-cart">
+                      <p className="item-product-price" style={{ textTransform: "none" }}>
+                        {product.price} грн
+                      </p>
 
-                    <button
-                      className={`favorite ${isFavorite(product.id) ? "active" : ""}`}
-                      onClick={() => handleFavorite(product.id)}
-                    >
-                    </button>
-                    <button className="add-to-cart lnr lnr-cart" onClick={() => handleAddToCart(product)}></button>
-
+                      <button
+                        className={`favorite ${
+                          isFavorite(product.id) ? "active" : ""
+                        }`}
+                        onClick={() => handleFavorite(product.id)}
+                      ></button>
+                      <button
+                        className="add-to-cart lnr lnr-cart"
+                        onClick={() => handleAddToCart(product)}
+                      ></button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
           </div>
         </div>
       </div>
-      <Pagination />
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={handlePageChange}
+      />
     </section>
   );
-};
+}
 
 export default ShopingSection;
