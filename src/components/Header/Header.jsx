@@ -42,7 +42,7 @@ const Header = ({ cartItems, favoriteItems }) => {
                   onMouseEnter={handleCatalogMouseEnter}
                   onMouseLeave={handleCatalogMouseLeave}
                 >
-                  <a href="/#">Каталог ⮟</a>
+                  <a href="/">Каталог ⮟</a>
                   {isCatalogOpen && (
                     <ul className={styles["dropdown-menu"]}>
                         <li><a href="/sofas">Дивани</a></li>
