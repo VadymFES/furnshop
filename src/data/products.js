@@ -1,6 +1,6 @@
 const products = [
     {
-        id: "1",
+        id: 1,
         name: "CozyCloud Sofa",
         image: "https://i.pinimg.com/564x/fa/d5/bd/fad5bd26f3e0a19b39c159380bf51785.jpg",
         carouselImages: [
@@ -10,10 +10,10 @@ const products = [
             'https://i.pinimg.com/564x/fa/d5/bd/fad5bd26f3e0a19b39c159380bf51785.jpg'
           ],
         description: "This sofa is the perfect addition to any living room. With its sleek and modern design, it adds a touch of elegance to your home decor. The sofa is made of high-quality materials, ensuring durability and longevity. The comfortable cushioning provides a cozy and relaxing seating experience for you and your guests. It's the ideal piece of furniture for lounging, entertaining, and relaxing. Whether you're watching your favorite TV show, reading a book, or taking a nap, this sofa has got you covered. Don't miss out on the chance to add this stylish and comfortable sofa to your home.",
-        price: "234",
-        countInStock: "3",
-        rating: "3",
-        numReviews: "45",
+        price: 234,
+        countInStock:3,
+        rating: 3,
+        numReviews: 45,
         isOnSale: true,
     },
     {
@@ -172,6 +172,39 @@ const products = [
         numReviews: "4",
         isOnSale: false,
     },
+    {
+      id: "13",
+      name: "wefff",
+      image: "https://i.pinimg.com/236x/d2/a2/02/d2a202a0422929091a6e9cdebab5e843.jpg",
+      description: "fewaaaaaaa",
+      price: "246",
+      countInStock: "3",
+      rating: "4",
+      numReviews: "4",
+      isOnSale: false,
+  },
+  {
+    id: "14",
+    name: "wefff",
+    image: "https://i.pinimg.com/236x/d2/a2/02/d2a202a0422929091a6e9cdebab5e843.jpg",
+    description: "fewaaaaaaa",
+    price: "246",
+    countInStock: "3",
+    rating: "4",
+    numReviews: "4",
+    isOnSale: false,
+},
+{
+  id: "15",
+  name: "wefff",
+  image: "https://i.pinimg.com/236x/d2/a2/02/d2a202a0422929091a6e9cdebab5e843.jpg",
+  description: "fewaaaaaaa",
+  price: "246",
+  countInStock: "3",
+  rating: "4",
+  numReviews: "4",
+  isOnSale: false,
+},
 ];
 
 export default products;

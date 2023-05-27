@@ -37,12 +37,12 @@ const Header = ({ cartItems, favoriteItems }) => {
             </button>
             <div className={`${styles["navbar-menu"]} ${isMenuOpen ? styles["active"] : ''}`}>
               <ul className={styles["navigation-items"]}>
-                <li className={styles["nav-item"]}><a href="/#">Головна</a></li>
+                <li className={styles["nav-item"]}><a href="/">Головна</a></li>
                 <li className={`${styles["nav-item"]} ${styles["dropdown"]}`}
                   onMouseEnter={handleCatalogMouseEnter}
                   onMouseLeave={handleCatalogMouseLeave}
                 >
-                  <a href="/#">Каталог ⮟</a>
+                  <a href="/">Каталог ⮟</a>
                   {isCatalogOpen && (
                     <ul className={styles["dropdown-menu"]}>
                         <li><a href="/sofas">Дивани</a></li>

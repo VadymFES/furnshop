@@ -1,6 +1,7 @@
 import React from 'react';
+import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import store from './store/store';
+import cartReducer from './store/reducers/CartReducer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from "./screens/Home";
 import "./App.css";
@@ -12,7 +13,7 @@ import NotFoundPage from "./screens/NotFoundPage/NotFoundPage";
 import AboutUs from "./screens/AboutUs/AboutUs";
 import CartPage from "./screens/CartPage/CartPage";
 
-
+const store = createStore(cartReducer);
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
           <Route path="*" element={<NotFoundPage />} />
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
-          <Route path="/product/:id" element={<SingleProduct />} />
+          <Route path="/products/:id" element={<SingleProduct />} />
           <Route path="/cart" element={<CartPage />} />
         </Routes>
       </Router>

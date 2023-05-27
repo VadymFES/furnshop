@@ -12,18 +12,20 @@ import { addToCart } from '../../store/actions/CartActions';
 
 function SingleProduct() {
   const { id } = useParams();
-  const product = products.find((product) => product.id === id);
+  const product = products.find((product) => product.id );
   const [comments, setComments] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
-const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(0);
   
   const dispatch = useDispatch();
-  
+
   useEffect(() => {
     const savedComments = JSON.parse(localStorage.getItem(`comments_${id}`));
     if (savedComments) {
       setComments(savedComments);
     }
+
+    window.scrollTo(0, 0); // Scroll to the top of the page
   }, [id]);
 
   const prevSlide = () => {
@@ -51,11 +53,10 @@ const [cartItems, setCartItems] = useState([]);
     e.target.reset();
   };
 
-
-    const handleAddToCart = () => {
-      dispatch(addToCart(product));
-      setCartItems([...cartItems, product]);
-    };
+  const handleAddToCart = () => {
+    dispatch(addToCart(product)); 
+    setCartItems(cartItems + 1);
+  };
 
 
 
@@ -64,7 +65,7 @@ const [cartItems, setCartItems] = useState([]);
 
   return (
     <div key={product.id}>
-<Header cartItems={cartItems} />
+      <Header />
       <div className="product-page">
         <nav >
           <div className="breadcrumb-item">
@@ -72,9 +73,9 @@ const [cartItems, setCartItems] = useState([]);
               <li className="breadcrumb-item">
               <img className="breadcrumb-icon" src={homeBreadcrumb} alt="Home" />
                 <Link to="/">Головна</Link> </li>
-              <li className="breadcrumb-item">
-                <img className="breadcrumb-icon" src={breadcrumbIcon} alt="breadcrumbIcon" />
-              <Link to="/shop">Каталог</Link> </li>
+              
+            
+              
               <li className="breadcrumb-item"><img className="breadcrumb-icon" src={breadcrumbIcon} alt="breadcrumbIcon" />
               <span className="product-name-breadcrumbs">{product.name}</span></li>
             </ol>
