@@ -12,7 +12,7 @@ import { addToCart } from '../../store/actions/CartActions';
 
 function SingleProduct() {
   const { id } = useParams();
-  const product = products.find((product) => product.id );
+  const product = products.find((product) => product.id === id );
   const [comments, setComments] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [cartItems, setCartItems] = useState(0);
