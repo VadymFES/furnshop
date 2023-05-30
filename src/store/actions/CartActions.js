@@ -1,13 +1,13 @@
-import { CART_ADD_ITEM, CART_REMOVE_ITEM } from './CartConstants';
+export const addToCart = (product) => {
+  return {
+    type: 'ADD_TO_CART',
+    payload: product,
+  };
+};
 
-
-export const addToCart = (item) => ({
-  type: CART_ADD_ITEM,
-  payload: item,
-  count: 1,
-});
-
-export const removeFromCart = (itemId) => ({
-  type: CART_REMOVE_ITEM,
-  payload: itemId,
-});
+export const removeFromCart = (productId) => {
+  return {
+    type: 'REMOVE_FROM_CART',
+    payload: productId,
+  };
+};
