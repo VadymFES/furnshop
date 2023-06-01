@@ -1,35 +1,24 @@
-.cart-page {
-  padding: 20px;
+.cartpage__header {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0; 
+
 }
 
-.cart-page h1 {
-  font-size: 24px;
-}
-
-.cart-page p {
-  margin-bottom: 10px;
-}
-
-.product-info {
+.cartpage__item {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* Adjust the margin as per your layout */
 }
 
-.product-info img {
-  width: 100px;
-  height: 100px;
-  margin-right: 10px;
+.cartpage__item-image {
+  width: 15rem; /* Adjust the width as per your requirement */
+  height: 15rem; /* Adjust the height as per your requirement */
+  object-fit: contain; /* Adjust the object-fit property as per your requirement */
+  margin-right: 10px; /* Adjust the margin as per your layout */
 }
 
-.product-info h3 {
-  font-size: 18px;
-}
-
-.product-info p {
-  margin: 5px 0;
-}
-
-.actions button {
-  margin-right: 10px;
+.cartpage__item-details {
+  display: flex;
+  flex-direction: column;
 }

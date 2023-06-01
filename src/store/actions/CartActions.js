@@ -5,9 +5,12 @@ export const addToCart = (product) => {
   };
 };
 
-export const removeFromCart = (productId) => {
+export const removeFromCart = (productId, quantity = 1) => {
   return {
     type: 'REMOVE_FROM_CART',
-    payload: productId,
+    payload: {
+      productId,
+      quantity,
+    },
   };
 };
